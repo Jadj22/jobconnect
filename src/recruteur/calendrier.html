@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace Recruteur — Calendrier | JobConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 600: '#4f46e5' } } } } };</script>
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="bg-white rounded-lg p-6 shadow-sm">
+        <div class="flex items-center justify-between mb-4">
+          <h1 class="text-xl font-bold">Calendrier des entretiens</h1>
+          <a href="./entretiens.html" class="text-sm text-gray-600 hover:underline">← Retour aux entretiens</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-7 gap-2">
+          <div class="p-4 border rounded bg-gray-50 text-sm">Lun</div>
+          <div class="p-4 border rounded bg-gray-50 text-sm">Mar</div>
+          <div class="p-4 border rounded bg-gray-50 text-sm">Mer</div>
+          <div class="p-4 border rounded bg-gray-50 text-sm">Jeu</div>
+          <div class="p-4 border rounded bg-gray-50 text-sm">Ven</div>
+          <div class="p-4 border rounded bg-gray-50 text-sm">Sam</div>
+          <div class="p-4 border rounded bg-gray-50 text-sm">Dim</div>
+        </div>
+        <p class="mt-4 text-sm text-gray-600">(Maquette calendrier — intégration d’un vrai calendrier possible ultérieurement)</p>
+      </div>
+    </main>
+  </body>
+</html>

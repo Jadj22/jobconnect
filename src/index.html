@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JobConnect</title>
+
+    <!-- Tailwind CSS via CDN (no build step needed) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind config (extend as needed)
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#eef2ff',
+                100: '#e0e7ff',
+                200: '#c7d2fe',
+                300: '#a5b4fc',
+                400: '#818cf8',
+                500: '#6366f1',
+                600: '#4f46e5',
+                700: '#4338ca',
+                800: '#3730a3',
+                900: '#312e81',
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="stylesheet" href="./assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- Dev toolbar to preview different navbar states (optional) -->
+    <div class="w-full bg-white border-b border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-3">
+        <span class="text-sm text-gray-600">Prévisualiser:</span>
+        <select id="navbarStateSelect" class="text-sm border-gray-300 rounded-md focus:ring-brand-500 focus:border-brand-500">
+          <option value="public">Version publique</option>
+          <option value="candidate">Candidat connecté</option>
+          <option value="recruiter">Recruteur connecté</option>
+          <option value="hr">Direction / RH</option>
+          <option value="admin">Administrateur</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- CONTAINER -->
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- NAVBAR: PUBLIC -->
+        <nav id="navbar-public" class="hidden" aria-label="Navbar publique">
+          <div class="flex items-center justify-between h-16">
+            <!-- Left: Logo -->
+            <div class="flex items-center gap-3">
+              <a href="#" class="flex items-center gap-2">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+                <span class="font-semibold text-lg">JobConnect</span>
+              </a>
+            </div>
+
+            <!-- Center: Primary links -->
+            <div class="hidden md:flex items-center gap-6">
+              <a href="#" class="nav-link">Accueil</a>
+              <a href="#" class="nav-link">Offres d’emploi</a>
+              <a href="#" class="nav-link">À propos</a>
+              <a href="#" class="nav-link">Contact</a>
+            </div>
+
+            <!-- Right: Auth actions -->
+            <div class="flex items-center gap-3">
+              <a href="#" class="btn-link">Se connecter</a>
+
+              <!-- Sign up dropdown -->
+              <div class="relative" data-dropdown>
+                <button class="btn-primary inline-flex items-center gap-2" data-dropdown-trigger>
+                  S’inscrire
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                    <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+                <div class="dropdown-menu" role="menu">
+                  <a href="#" class="dropdown-item">Comme candidat</a>
+                  <a href="#" class="dropdown-item">Comme recruteur</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- NAVBAR: CANDIDATE -->
+        <nav id="navbar-candidate" class="hidden" aria-label="Navbar candidat">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center gap-3">
+              <a href="#" class="flex items-center gap-2">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+                <span class="font-semibold text-lg">JobConnect</span>
+              </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-6">
+              <a href="#" class="nav-link">Accueil</a>
+              <a href="#" class="nav-link">Offres d’emploi</a>
+              <a href="#" class="nav-link">Mes candidatures</a>
+              <a href="#" class="nav-link">Entretiens</a>
+              <a href="#" class="nav-link inline-flex items-center gap-1">
+                Notifications
+                <span class="ml-1 inline-flex items-center justify-center h-5 min-w-[1.25rem] px-1 rounded-full text-xs font-medium bg-red-600 text-white">3</span>
+              </a>
+            </div>
+
+            <!-- User menu -->
+            <div class="relative flex items-center gap-3" data-dropdown>
+              <button class="inline-flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-gray-100" data-dropdown-trigger>
+                <img src="https://i.pravatar.cc/28?img=3" alt="Profil" class="h-7 w-7 rounded-full" />
+                <span class="hidden sm:inline font-medium">Moi</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div class="dropdown-menu right-0" role="menu">
+                <a href="#" class="dropdown-item">Profil</a>
+                <a href="#" class="dropdown-item">Paramètres</a>
+                <div class="dropdown-sep"></div>
+                <a href="#" class="dropdown-item text-red-600">Déconnexion</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- NAVBAR: RECRUITER -->
+        <nav id="navbar-recruiter" class="hidden" aria-label="Navbar recruteur">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center gap-3">
+              <a href="#" class="flex items-center gap-2">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+                <span class="font-semibold text-lg">JobConnect</span>
+              </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-6">
+              <a href="#" class="nav-link">Accueil</a>
+              <a href="#" class="nav-link">Mes offres</a>
+              <a href="#" class="nav-link">Candidatures reçues</a>
+              <a href="#" class="nav-link">Entretiens</a>
+            </div>
+
+            <div class="relative" data-dropdown>
+              <button class="inline-flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-gray-100" data-dropdown-trigger>
+                <span class="inline-flex h-7 w-7 items-center justify-center rounded bg-brand-600 text-white text-sm font-semibold">🏢</span>
+                <span class="hidden sm:inline font-medium">Société</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div class="dropdown-menu right-0" role="menu">
+                <a href="#" class="dropdown-item">Profil entreprise</a>
+                <a href="#" class="dropdown-item">Paramètres</a>
+                <div class="dropdown-sep"></div>
+                <a href="#" class="dropdown-item text-red-600">Déconnexion</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- NAVBAR: HR -->
+        <nav id="navbar-hr" class="hidden" aria-label="Navbar RH">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center gap-3">
+              <a href="#" class="flex items-center gap-2">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+                <span class="font-semibold text-lg">JobConnect</span>
+              </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-6">
+              <a href="#" class="nav-link">Tableau de bord</a>
+              <a href="#" class="nav-link">Suivi des candidatures</a>
+              <a href="#" class="nav-link">Rapports</a>
+            </div>
+
+            <div class="relative" data-dropdown>
+              <button class="inline-flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-gray-100" data-dropdown-trigger>
+                <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-gray-200 text-gray-800 text-sm font-semibold">👤</span>
+                <span class="hidden sm:inline font-medium">RH</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div class="dropdown-menu right-0" role="menu">
+                <a href="#" class="dropdown-item">Profil</a>
+                <a href="#" class="dropdown-item">Paramètres</a>
+                <div class="dropdown-sep"></div>
+                <a href="#" class="dropdown-item text-red-600">Déconnexion</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- NAVBAR: ADMIN -->
+        <nav id="navbar-admin" class="hidden" aria-label="Navbar admin">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center gap-3">
+              <a href="#" class="flex items-center gap-2">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+                <span class="font-semibold text-lg">JobConnect</span>
+              </a>
+            </div>
+
+            <div class="hidden md:flex items-center gap-6">
+              <a href="#" class="nav-link">Tableau de bord</a>
+              <a href="#" class="nav-link">Utilisateurs</a>
+              <a href="#" class="nav-link">Offres</a>
+              <a href="#" class="nav-link">Contenus</a>
+              <a href="#" class="nav-link">Paramètres</a>
+            </div>
+
+            <div class="relative" data-dropdown>
+              <button class="inline-flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-gray-100" data-dropdown-trigger>
+                <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-gray-200 text-gray-800 text-sm font-semibold">⚙️</span>
+                <span class="hidden sm:inline font-medium">Admin</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4">
+                  <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                </svg>
+              </button>
+              <div class="dropdown-menu right-0" role="menu">
+                <a href="#" class="dropdown-item">Profil</a>
+                <div class="dropdown-sep"></div>
+                <a href="#" class="dropdown-item text-red-600">Déconnexion</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+              Trouvez votre prochain emploi ou votre futur talent avec JobConnect.
+            </h1>
+            <p class="text-lg text-gray-600 mb-6">
+              Plateforme moderne pour connecter candidats et recruteurs, simplifier le recrutement et accélérer votre carrière.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="./offres.html" class="btn-primary inline-flex items-center">Je cherche un emploi</a>
+              <a href="./auth/register-recruteur.html" class="inline-flex items-center px-3 py-2 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-50">Je recrute</a>
+            </div>
+          </div>
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" alt="Équipe professionnelle" class="w-full h-72 object-cover rounded-lg shadow-md" />
+          </div>
+        </div>
+      </section>
+
+      <!-- PRESENTATION -->
+      <section class="bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <div class="text-brand-600 text-2xl mb-3">🔍</div>
+              <h3 class="font-semibold text-lg mb-2">Recherchez des offres facilement</h3>
+              <p class="text-gray-600">Filtrez par domaine, contrat, localisation et trouvez rapidement les opportunités qui vous correspondent.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <div class="text-brand-600 text-2xl mb-3">📄</div>
+              <h3 class="font-semibold text-lg mb-2">Postulez en quelques clics</h3>
+              <p class="text-gray-600">Candidature rapide et CV centralisé pour ne rien rater et gagner du temps.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-sm">
+              <div class="text-brand-600 text-2xl mb-3">💬</div>
+              <h3 class="font-semibold text-lg mb-2">Discutez avec les recruteurs</h3>
+              <p class="text-gray-600">Communication directe et transparente pour accélérer le processus d’embauche.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEMOIGNAGES / STATS -->
+      <section class="bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 grid gap-10">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-gray-50 rounded-lg p-6">
+              <p class="text-gray-700 italic mb-3">“J’ai trouvé mon CDI en 3 semaines grâce à JobConnect.”</p>
+              <div class="text-sm text-gray-500">— Sarah, Développeuse</div>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <p class="text-gray-700 italic mb-3">“Le sourcing est plus simple et la communication plus fluide.”</p>
+              <div class="text-sm text-gray-500">— Marc, Recruteur</div>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-6">
+              <p class="text-gray-700 italic mb-3">“Une plateforme intuitive et efficace pour les RH.”</p>
+              <div class="text-sm text-gray-500">— Claire, RH</div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+            <div class="p-6 rounded-lg bg-gray-50">
+              <div class="text-3xl font-bold text-gray-900">200+ </div>
+              <div class="text-gray-600">entreprises partenaires</div>
+            </div>
+            <div class="p-6 rounded-lg bg-gray-50">
+              <div class="text-3xl font-bold text-gray-900">5000+ </div>
+              <div class="text-gray-600">candidats inscrits</div>
+            </div>
+            <div class="p-6 rounded-lg bg-gray-50">
+              <div class="text-3xl font-bold text-gray-900">95% </div>
+              <div class="text-gray-600">de satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 text-center">
+          <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">Rejoignez JobConnect dès aujourd’hui et boostez votre carrière.</h2>
+          <p class="text-gray-600 mb-6">Créez votre compte gratuitement et accédez à des centaines d’offres.</p>
+          <div class="flex flex-wrap gap-3 justify-center">
+            <a href="./auth/register-candidat.html" class="btn-primary inline-flex items-center">S’inscrire</a>
+            <a href="./auth/login.html" class="inline-flex items-center px-3 py-2 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-50">Se connecter</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-gray-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-sm text-gray-600">© 2025 JobConnect</p>
+        <nav class="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+          <a class="hover:text-gray-900" href="#">Mentions légales</a>
+          <a class="hover:text-gray-900" href="#">Politique de confidentialité</a>
+          <a class="hover:text-gray-900" href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="./assets/js/navbars.js"></script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+/* Minimal CSS to complement Tailwind CDN without using @apply */
+
+/* Links and buttons get their primary look from Tailwind classes in HTML. 
+   These light touches add smooth transitions and cursor hints. */
+.nav-link,
+.btn-link,
+.btn-primary,
+.dropdown-item,
+[data-dropdown-trigger] {
+  transition: color 150ms ease, background-color 150ms ease, box-shadow 150ms ease, opacity 150ms ease;
+  cursor: pointer;
+}
+
+/* Dropdown base (positioning and default hidden state) */
+[data-dropdown] {
+  position: relative;
+}
+
+[data-dropdown] .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0.5rem; /* mt-2 */
+  width: 13rem; /* ~w-52 */
+  background: #ffffff;
+  border-radius: 0.375rem; /* rounded-md */
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.05);
+  display: none;
+  z-index: 50;
+}
+
+[data-dropdown] .dropdown-menu.right-0 {
+  right: 0;
+  left: auto;
+}
+
+[data-dropdown].open .dropdown-menu {
+  display: block;
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.5rem 0.75rem; /* px-3 py-2 */
+  font-size: 0.875rem; /* text-sm */
+  color: #374151; /* gray-700 */
+  text-decoration: none;
+}
+
+.dropdown-item:hover {
+  background: #f9fafb; /* gray-50 */
+  color: #111827; /* gray-900 */
+}
+
+.dropdown-sep {
+  height: 1px;
+  margin: 0.25rem 0; /* my-1 */
+  background: #f3f4f6; /* gray-100 */
+}

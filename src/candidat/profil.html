@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace Candidat — Profil | JobConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 600: '#4f46e5' } } } } };</script>
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-6">
+      <!-- Informations personnelles -->
+      <section class="bg-white rounded-lg p-6 shadow-sm" id="infos">
+        <h1 class="text-xl font-bold mb-4">Informations personnelles</h1>
+        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Nom</label>
+            <input type="text" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" value="Dupont" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Prénom</label>
+            <input type="text" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" value="Sarah" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Email</label>
+            <input type="email" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" value="sarah.dupont@example.com" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Téléphone</label>
+            <input type="tel" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" value="06 12 34 56 78" />
+          </div>
+          <div class="sm:col-span-2">
+            <button class="btn-primary">Enregistrer</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- CV et lettre de motivation -->
+      <section class="bg-white rounded-lg p-6 shadow-sm" id="cv">
+        <h2 class="text-lg font-semibold mb-4">CV et lettre de motivation</h2>
+        <form class="grid grid-cols-1 gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">CV</label>
+            <input type="file" accept=".pdf,.doc,.docx" class="text-sm" />
+            <p class="text-xs text-gray-500 mt-1">CV actuel: CV_Sarah_2025.pdf</p>
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Lettre de motivation</label>
+            <textarea rows="5" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" placeholder="Optionnel"></textarea>
+          </div>
+          <div>
+            <button class="btn-primary">Mettre à jour</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Paramètres du compte -->
+      <section class="bg-white rounded-lg p-6 shadow-sm" id="params">
+        <h2 class="text-lg font-semibold mb-4">Paramètres du compte</h2>
+        <form class="grid grid-cols-1 gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Nouveau mot de passe</label>
+            <input type="password" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Confirmer le mot de passe</label>
+            <input type="password" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+          </div>
+          <div>
+            <button class="btn-primary">Mettre à jour le mot de passe</button>
+          </div>
+        </form>
+      </section>
+
+      <div class="text-center">
+        <a href="./index.html" class="text-sm text-gray-600 hover:underline">← Retour au tableau de bord</a>
+      </div>
+    </main>
+  </body>
+</html>

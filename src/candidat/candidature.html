@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace Candidat — Détail candidature | JobConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 600: '#4f46e5' } } } } };</script>
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Navbar candidat">
+          <div class="flex items-center justify-between h-16">
+            <a href="../index.html" class="flex items-center gap-2">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+              <span class="font-semibold text-lg">JobConnect</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6">
+              <a href="./index.html" class="nav-link">Accueil</a>
+              <a href="./offres.html" class="nav-link">Offres d’emploi</a>
+              <a href="./candidatures.html" class="nav-link font-semibold text-brand-600">Mes candidatures</a>
+              <a href="./entretiens.html" class="nav-link">Entretiens</a>
+              <a href="./notifications.html" class="nav-link">Notifications</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+      <section class="bg-white rounded-lg p-6 shadow-sm">
+        <h1 class="text-xl font-bold mb-2">Candidature — Développeur Front-end React</h1>
+        <div class="text-sm text-gray-600">Entreprise: TechNova • Envoyée le 10/09 • Statut: <span class="px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800">En cours</span></div>
+      </section>
+
+      <section class="bg-white rounded-lg p-6 shadow-sm">
+        <h2 class="font-semibold mb-2">Votre message</h2>
+        <p class="text-gray-700">Bonjour, je suis intéressé(e) par le poste et disponible pour un entretien…</p>
+      </section>
+
+      <section class="bg-white rounded-lg p-6 shadow-sm">
+        <h2 class="font-semibold mb-2">CV transmis</h2>
+        <p class="text-gray-700 text-sm">CV_Alexandre_2025.pdf</p>
+      </section>
+    </main>
+
+    <script src="../assets/js/navbars.js"></script>
+  </body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace Candidat — Offres d’emploi | JobConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 600: '#4f46e5' } } } } };</script>
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Navbar candidat">
+          <div class="flex items-center justify-between h-16">
+            <a href="../index.html" class="flex items-center gap-2">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+              <span class="font-semibold text-lg">JobConnect</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6">
+              <a href="./index.html" class="nav-link">Accueil</a>
+              <a href="./offres.html" class="nav-link font-semibold text-brand-600">Offres d’emploi</a>
+              <a href="./candidatures.html" class="nav-link">Mes candidatures</a>
+              <a href="./entretiens.html" class="nav-link">Entretiens</a>
+              <a href="./notifications.html" class="nav-link">Notifications</a>
+            </div>
+            <div class="relative" data-dropdown>
+              <button class="inline-flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-gray-100" data-dropdown-trigger>
+                <img src="https://i.pravatar.cc/28?img=3" alt="Profil" class="h-7 w-7 rounded-full" />
+                <span class="hidden sm:inline font-medium">Moi</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+              </button>
+              <div class="dropdown-menu right-0" role="menu">
+                <a href="./profil.html" class="dropdown-item">Profil</a>
+                <a href="./profil.html#params" class="dropdown-item">Paramètres</a>
+                <div class="dropdown-sep"></div>
+                <a href="../index.html" class="dropdown-item text-red-600">Déconnexion</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <aside class="lg:col-span-1 space-y-2">
+        <a class="block px-3 py-2 rounded-md bg-white shadow-sm border border-gray-100" href="./index.html">Tableau de bord</a>
+        <a class="block px-3 py-2 rounded-md bg-white shadow-sm border border-gray-100 font-medium" href="./offres.html">Offres d’emploi</a>
+        <a class="block px-3 py-2 rounded-md bg-white shadow-sm border border-gray-100" href="./candidatures.html">Mes candidatures</a>
+        <a class="block px-3 py-2 rounded-md bg-white shadow-sm border border-gray-100" href="./entretiens.html">Entretiens</a>
+        <a class="block px-3 py-2 rounded-md bg-white shadow-sm border border-gray-100" href="./notifications.html">Notifications</a>
+        <a class="block px-3 py-2 rounded-md bg-white shadow-sm border border-gray-100" href="./profil.html">Profil</a>
+      </aside>
+
+      <main class="lg:col-span-3 space-y-6">
+        <section class="bg-white rounded-lg p-4 shadow-sm flex flex-col md:flex-row gap-3 md:items-end">
+          <div class="flex-1">
+            <label class="block text-sm font-medium text-gray-700 mb-1">Rechercher</label>
+            <input type="text" placeholder="Rechercher un poste…" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Contrat</label>
+            <select class="rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600"><option>Tout</option><option>CDI</option><option>CDD</option><option>Stage</option></select>
+          </div>
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-1">Localisation</label>
+            <input type="text" placeholder="Ville / Remote" class="rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+          </div>
+          <button class="btn-primary">Rechercher</button>
+        </section>
+
+        <section class="grid grid-cols-1 gap-4">
+          <article class="bg-white rounded-lg p-5 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">Développeur Front-end React</h3>
+              <p class="text-gray-600">TechNova • Paris, FR</p>
+              <div class="text-sm text-gray-500">CDI – Publié il y a 3 jours</div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center rounded-full bg-gray-100 text-gray-700 text-xs px-2 py-1">Remote</span>
+              <a href="./offre.html" class="inline-flex items-center px-3 py-2 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-50">Voir</a>
+              <a href="./offre.html#postuler" class="btn-primary">Postuler</a>
+            </div>
+          </article>
+          <article class="bg-white rounded-lg p-5 shadow-sm flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900">Data Analyst</h3>
+              <p class="text-gray-600">DataCorp • Remote</p>
+              <div class="text-sm text-gray-500">CDD – Publié hier</div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="inline-flex items-center rounded-full bg-gray-100 text-gray-700 text-xs px-2 py-1">Temps plein</span>
+              <a href="./offre.html" class="inline-flex items-center px-3 py-2 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-50">Voir</a>
+              <a href="./offre.html#postuler" class="btn-primary">Postuler</a>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="../assets/js/navbars.js"></script>
+  </body>
+</html>

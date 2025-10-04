@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Article — JobConnect Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 600: '#4f46e5' } } } } };</script>
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Navbar publique">
+          <div class="flex items-center justify-between h-16">
+            <a href="../index.html" class="flex items-center gap-2">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+              <span class="font-semibold text-lg">JobConnect</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6">
+              <a href="../index.html" class="nav-link">Accueil</a>
+              <a href="../offres.html" class="nav-link">Offres d’emploi</a>
+              <a href="../a-propos.html" class="nav-link">À propos</a>
+              <a href="../contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <a href="../auth/login.html" class="btn-link">Se connecter</a>
+              <a href="../auth/register-candidat.html" class="btn-primary">S’inscrire</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-6">
+      <article class="bg-white rounded-lg p-6 shadow-sm">
+        <header class="mb-4">
+          <h1 class="text-2xl font-bold">Conseils pour réussir vos entretiens</h1>
+          <div class="text-sm text-gray-500">Publié le 01/09 par Admin • 5 min de lecture</div>
+        </header>
+        <img class="w-full h-56 object-cover rounded mb-4" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Article"/>
+        <div class="prose max-w-none">
+          <p>Préparez-vous efficacement et mettez toutes les chances de votre côté grâce à ces conseils concrets...</p>
+          <h2>1. Recherchez l’entreprise</h2>
+          <p>Comprenez sa mission, ses produits et sa culture...</p>
+          <h2>2. Entraînez-vous</h2>
+          <p>Simulez des questions fréquentes et structurez vos réponses...</p>
+        </div>
+        <div class="mt-6 flex items-center gap-3">
+          <button class="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-50" aria-pressed="false">
+            ❤️ <span>J’aime</span>
+          </button>
+          <span class="text-sm text-gray-600">128 likes</span>
+        </div>
+      </article>
+
+      <section class="bg-white rounded-lg p-6 shadow-sm">
+        <h2 class="text-lg font-semibold mb-3">Commentaires</h2>
+        <div class="space-y-4">
+          <div class="border rounded p-3">
+            <div class="text-sm text-gray-700"><strong>Sarah</strong> — Très utile, merci !</div>
+          </div>
+          <div class="border rounded p-3">
+            <div class="text-sm text-gray-700"><strong>Alex</strong> — J’ajouterais aussi une section sur la négociation salariale.</div>
+          </div>
+        </div>
+        <form class="mt-4 grid grid-cols-1 gap-3">
+          <textarea rows="4" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" placeholder="Écrire un commentaire…"></textarea>
+          <button class="btn-primary w-full sm:w-auto">Publier</button>
+        </form>
+      </section>
+
+      <div class="text-center text-sm">
+        <a href="./articles.html" class="text-gray-600 hover:underline">← Retour aux articles</a>
+      </div>
+    </main>
+  </body>
+</html>

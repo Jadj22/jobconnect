@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace Candidat — Offre | JobConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 600: '#4f46e5' } } } } };</script>
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Navbar candidat">
+          <div class="flex items-center justify-between h-16">
+            <a href="../index.html" class="flex items-center gap-2">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+              <span class="font-semibold text-lg">JobConnect</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6">
+              <a href="./index.html" class="nav-link">Accueil</a>
+              <a href="./offres.html" class="nav-link font-semibold text-brand-600">Offres d’emploi</a>
+              <a href="./candidatures.html" class="nav-link">Mes candidatures</a>
+              <a href="./entretiens.html" class="nav-link">Entretiens</a>
+              <a href="./notifications.html" class="nav-link">Notifications</a>
+            </div>
+            <div class="relative" data-dropdown>
+              <button class="inline-flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-gray-100" data-dropdown-trigger>
+                <img src="https://i.pravatar.cc/28?img=3" alt="Profil" class="h-7 w-7 rounded-full" />
+                <span class="hidden sm:inline font-medium">Moi</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+              </button>
+              <div class="dropdown-menu right-0" role="menu">
+                <a href="./profil.html" class="dropdown-item">Profil</a>
+                <a href="./profil.html#params" class="dropdown-item">Paramètres</a>
+                <div class="dropdown-sep"></div>
+                <a href="../index.html" class="dropdown-item text-red-600">Déconnexion</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <article class="lg:col-span-2">
+        <header class="mb-6">
+          <h1 class="text-2xl font-bold text-gray-900 mb-1">Développeur Front-end React</h1>
+          <div class="text-gray-600">TechNova • Paris, FR • CDI • Publié il y a 3 jours</div>
+        </header>
+        <section class="bg-white rounded-lg p-6 shadow-sm mb-6">
+          <h2 class="font-semibold text-lg mb-2">Description du poste</h2>
+          <p class="text-gray-700">Vous participerez à la conception d’interfaces performantes et accessibles sur React.</p>
+        </section>
+        <section class="bg-white rounded-lg p-6 shadow-sm mb-6">
+          <h2 class="font-semibold text-lg mb-2">Profil recherché</h2>
+          <ul class="list-disc pl-5 text-gray-700 space-y-1">
+            <li>3+ ans d’expérience</li>
+            <li>React, HTML, CSS, REST</li>
+          </ul>
+        </section>
+        <section id="postuler" class="bg-white rounded-lg p-6 shadow-sm">
+          <h2 class="font-semibold text-lg mb-3">Postuler à cette offre</h2>
+          <form class="grid grid-cols-1 gap-3">
+            <div>
+              <label class="block text-sm font-medium mb-1">Lettre de motivation</label>
+              <textarea rows="5" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" placeholder="Expliquez pourquoi vous êtes le bon profil…"></textarea>
+            </div>
+            <div>
+              <label class="block text-sm font-medium mb-1">CV</label>
+              <input type="file" accept=".pdf,.doc,.docx" class="text-sm" />
+            </div>
+            <button class="btn-primary w-full sm:w-auto">Envoyer la candidature</button>
+          </form>
+        </section>
+      </article>
+
+      <aside class="lg:col-span-1 space-y-4">
+        <div class="bg-white rounded-lg p-6 shadow-sm">
+          <h3 class="font-semibold text-gray-900 mb-2">Entreprise</h3>
+          <div class="flex items-center gap-3 mb-3">
+            <div class="h-10 w-10 rounded bg-gray-200"></div>
+            <div>
+              <div class="font-medium">TechNova</div>
+              <a href="#" class="text-sm text-brand-600 hover:underline">Site web</a>
+            </div>
+          </div>
+          <p class="text-gray-700 text-sm">Scale-up SaaS B2B.</p>
+        </div>
+      </aside>
+    </main>
+
+    <script src="../assets/js/navbars.js"></script>
+  </body>
+</html>

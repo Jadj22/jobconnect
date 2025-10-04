@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace Recruteur — Entretiens | JobConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 600: '#4f46e5' } } } } };</script>
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+      <div class="bg-white rounded-lg p-5 shadow-sm">
+        <div class="flex items-center justify-between">
+          <h1 class="text-xl font-bold">Entretiens</h1>
+          <a href="./calendrier.html" class="text-sm text-brand-600 hover:underline">Voir le calendrier</a>
+        </div>
+        <div class="mt-4 grid grid-cols-1 gap-3">
+          <a href="./entretien.html" class="block p-4 rounded-md border border-gray-200 hover:bg-gray-50">
+            <div class="flex items-center justify-between">
+              <div>
+                <div class="font-medium">Entretien — Sarah D. — TechNova</div>
+                <div class="text-sm text-gray-500">Vendredi 10/10 à 10h — Google Meet</div>
+              </div>
+              <span class="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-800">Planifié</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg p-5 shadow-sm">
+        <h2 class="font-semibold mb-3">Planification rapide</h2>
+        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Candidat</label>
+            <input type="text" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" placeholder="Nom du candidat" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Date et heure</label>
+            <input type="datetime-local" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-sm font-medium mb-1">Lien de réunion</label>
+            <input type="url" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" placeholder="https://…" />
+          </div>
+          <div class="sm:col-span-2">
+            <button class="btn-primary">Planifier</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

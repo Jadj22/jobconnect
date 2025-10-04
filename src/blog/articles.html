@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Articles | JobConnect Blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 600: '#4f46e5' } } } } };</script>
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Navbar publique">
+          <div class="flex items-center justify-between h-16">
+            <a href="../index.html" class="flex items-center gap-2">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+              <span class="font-semibold text-lg">JobConnect</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6">
+              <a href="../index.html" class="nav-link">Accueil</a>
+              <a href="../offres.html" class="nav-link">Offres d’emploi</a>
+              <a href="../a-propos.html" class="nav-link">À propos</a>
+              <a href="../contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <a href="../auth/login.html" class="btn-link">Se connecter</a>
+              <a href="../auth/register-candidat.html" class="btn-primary">S’inscrire</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-6">
+      <h1 class="text-2xl font-bold">Articles</h1>
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <a href="./article.html" class="block bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+          <img class="w-full h-36 object-cover" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop" alt="Article"/>
+          <div class="p-4">
+            <h3 class="font-semibold">Conseils pour réussir vos entretiens</h3>
+            <p class="text-sm text-gray-600">Préparez-vous efficacement et mettez toutes les chances de votre côté.</p>
+          </div>
+        </a>
+        <a href="./article.html" class="block bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+          <img class="w-full h-36 object-cover" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Article"/>
+          <div class="p-4">
+            <h3 class="font-semibold">Structurer un CV impactant</h3>
+            <p class="text-sm text-gray-600">Les sections clés et les erreurs à éviter.</p>
+          </div>
+        </a>
+        <a href="./article.html" class="block bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition">
+          <img class="w-full h-36 object-cover" src="https://images.unsplash.com/photo-1485217988980-11786ced9454?q=80&w=1200&auto=format&fit=crop" alt="Article"/>
+          <div class="p-4">
+            <h3 class="font-semibold">Tendances du marché 2025</h3>
+            <p class="text-sm text-gray-600">Les métiers qui recrutent et les compétences recherchées.</p>
+          </div>
+        </a>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription recruteur | JobConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 600: '#4f46e5' } } } } };</script>
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <main class="min-h-screen flex items-center justify-center px-4">
+      <div class="w-full max-w-xl bg-white rounded-lg p-6 shadow-sm">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+          <span class="font-semibold text-lg">JobConnect</span>
+        </div>
+        <h1 class="text-xl font-bold mb-4">Créer un compte (Entreprise)</h1>
+        <form class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="sm:col-span-2">
+            <label class="block text-sm font-medium mb-1">Nom de l’entreprise</label>
+            <input type="text" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+          </div>
+          <div class="sm:col-span-1">
+            <label class="block text-sm font-medium mb-1">Secteur d’activité</label>
+            <input type="text" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+          </div>
+          <div class="sm:col-span-1">
+            <label class="block text-sm font-medium mb-1">Email professionnel</label>
+            <input type="email" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+          </div>
+          <div class="sm:col-span-2">
+            <label class="block text-sm font-medium mb-1">Mot de passe</label>
+            <input type="password" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+          </div>
+          <div class="sm:col-span-2">
+            <button type="submit" class="btn-primary w-full">Créer un compte</button>
+          </div>
+        </form>
+        <div class="mt-6 text-center">
+          <a href="../index.html" class="text-sm text-gray-600 hover:underline">← Retour à l’accueil</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

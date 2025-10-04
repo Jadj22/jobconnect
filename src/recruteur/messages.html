@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace Recruteur — Messages | JobConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 600: '#4f46e5' } } } } };</script>
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <aside class="bg-white rounded-lg p-4 shadow-sm">
+        <h2 class="font-semibold mb-3">Conversations</h2>
+        <ul class="space-y-2 text-sm">
+          <li><a class="block p-2 rounded hover:bg-gray-50" href="#">Sarah D. — TechNova</a></li>
+          <li><a class="block p-2 rounded hover:bg-gray-50" href="#">Alex P. — StartUpX</a></li>
+        </ul>
+      </aside>
+      <section class="md:col-span-2 bg-white rounded-lg p-4 shadow-sm flex flex-col h-[70vh]">
+        <div class="flex-1 overflow-auto space-y-3">
+          <div class="text-sm text-gray-600">[09:00] Sarah: Bonjour, merci pour votre retour !</div>
+          <div class="text-sm text-gray-600 text-right">[09:05] Vous: Bonjour, disponible demain 10h pour un échange ?</div>
+        </div>
+        <form class="mt-4 flex gap-2">
+          <input type="text" class="flex-1 rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" placeholder="Écrire un message…" />
+          <button class="btn-primary">Envoyer</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

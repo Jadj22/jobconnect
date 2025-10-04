@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion | JobConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 600: '#4f46e5' } } } } };</script>
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <main class="min-h-screen flex items-center justify-center px-4">
+      <div class="w-full max-w-md bg-white rounded-lg p-6 shadow-sm">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+          <span class="font-semibold text-lg">JobConnect</span>
+        </div>
+        <h1 class="text-xl font-bold mb-4">Se connecter</h1>
+        <form class="grid grid-cols-1 gap-4">
+          <div>
+            <label class="block text-sm font-medium mb-1">Email</label>
+            <input type="email" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600" />
+          </div>
+          <div>
+            <label class="block text-sm font-medium mb-1">Mot de passe</label>
+            <div class="relative">
+              <input type="password" class="w-full rounded-md border-gray-300 focus:border-brand-600 focus:ring-brand-600 pr-10" />
+            </div>
+          </div>
+          <button type="submit" class="btn-primary">Se connecter</button>
+        </form>
+        <div class="mt-3 text-sm text-gray-600">
+          <a href="#" class="text-brand-600 hover:underline">Mot de passe oublié ?</a>
+        </div>
+        <div class="mt-4 text-sm text-gray-700">
+          Pas de compte ?
+          <a href="./register-candidat.html" class="text-brand-600 hover:underline">Créer un compte</a>
+        </div>
+        <div class="mt-2 text-sm text-gray-700">
+          Recruteur ? <a href="./register-recruteur.html" class="text-brand-600 hover:underline">Créer un compte entreprise</a>
+        </div>
+        <div class="mt-6 text-center">
+          <a href="../index.html" class="text-sm text-gray-600 hover:underline">← Retour à l’accueil</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

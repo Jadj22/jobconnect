@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>À propos | JobConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 600: '#4f46e5' } } } } };</script>
+    <link rel="stylesheet" href="./assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Navbar publique">
+          <div class="flex items-center justify-between h-16">
+            <div class="flex items-center gap-3">
+              <a href="./index.html" class="flex items-center gap-2">
+                <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+                <span class="font-semibold text-lg">JobConnect</span>
+              </a>
+            </div>
+            <div class="hidden md:flex items-center gap-6">
+              <a href="./index.html" class="nav-link">Accueil</a>
+              <a href="./offres.html" class="nav-link">Offres d’emploi</a>
+              <a href="./a-propos.html" class="nav-link font-semibold text-brand-600">À propos</a>
+              <a href="./contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="flex items-center gap-3">
+              <a href="./auth/login.html" class="btn-link">Se connecter</a>
+              <a href="./auth/register-candidat.html" class="btn-primary">S’inscrire</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
+      <section class="bg-white rounded-lg p-6 shadow-sm">
+        <h1 class="text-2xl font-bold mb-2">Notre mission</h1>
+        <p class="text-gray-700">Simplifier le recrutement et donner plus de visibilité aux talents. JobConnect rapproche les candidats des entreprises à la recherche de profils qualifiés grâce à une plateforme moderne, accessible et transparente.</p>
+      </section>
+
+      <section class="bg-white rounded-lg p-6 shadow-sm">
+        <h2 class="text-xl font-semibold mb-3">Histoire</h2>
+        <p class="text-gray-700">Née en 2025, JobConnect est le fruit de la collaboration entre des professionnels du recrutement et de la tech, avec l’ambition de fluidifier l’expérience candidat et recruteur.</p>
+      </section>
+
+      <section class="bg-white rounded-lg p-6 shadow-sm">
+        <h2 class="text-xl font-semibold mb-3">Équipe fondatrice</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div class="text-center">
+            <div class="h-20 w-20 rounded-full bg-gray-200 mx-auto mb-2"></div>
+            <div class="font-medium">Alexandre</div>
+            <div class="text-sm text-gray-600">CEO</div>
+          </div>
+          <div class="text-center">
+            <div class="h-20 w-20 rounded-full bg-gray-200 mx-auto mb-2"></div>
+            <div class="font-medium">Nadia</div>
+            <div class="text-sm text-gray-600">CTO</div>
+          </div>
+          <div class="text-center">
+            <div class="h-20 w-20 rounded-full bg-gray-200 mx-auto mb-2"></div>
+            <div class="font-medium">Youssef</div>
+            <div class="text-sm text-gray-600">Head of Talent</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-lg p-6 shadow-sm">
+        <h2 class="text-xl font-semibold mb-3">Nos valeurs</h2>
+        <ul class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <li class="p-4 rounded bg-gray-50">
+            <div class="font-semibold mb-1">Transparence</div>
+            <p class="text-sm text-gray-700">Communication claire et honnête tout au long du processus.</p>
+          </li>
+          <li class="p-4 rounded bg-gray-50">
+            <div class="font-semibold mb-1">Accessibilité</div>
+            <p class="text-sm text-gray-700">Une expérience inclusive pour tous les profils.</p>
+          </li>
+          <li class="p-4 rounded bg-gray-50">
+            <div class="font-semibold mb-1">Innovation</div>
+            <p class="text-sm text-gray-700">Amélioration continue et technologies modernes.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 mt-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p class="text-sm text-gray-600">© 2025 JobConnect</p>
+        <nav class="flex flex-wrap items-center gap-4 text-sm text-gray-600">
+          <a class="hover:text-gray-900" href="#">Mentions légales</a>
+          <a class="hover:text-gray-900" href="#">Politique de confidentialité</a>
+          <a class="hover:text-gray-900" href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

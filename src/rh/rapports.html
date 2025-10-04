@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Espace RH — Rapports & statistiques | JobConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config = { theme: { extend: { colors: { brand: { 600: '#4f46e5' } } } } };</script>
+    <link rel="stylesheet" href="../assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <header class="bg-white shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Navbar RH">
+          <div class="flex items-center justify-between h-16">
+            <a href="../index.html" class="flex items-center gap-2">
+              <span class="inline-flex h-9 w-9 items-center justify-center rounded bg-brand-600 text-white font-bold">JC</span>
+              <span class="font-semibold text-lg">JobConnect</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6">
+              <a href="./index.html" class="nav-link">Tableau de bord</a>
+              <a href="./candidatures.html" class="nav-link">Suivi des candidatures</a>
+              <a href="./rapports.html" class="nav-link font-semibold text-brand-600">Rapports</a>
+            </div>
+            <div class="relative" data-dropdown>
+              <button class="inline-flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-gray-100" data-dropdown-trigger>
+                <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-gray-200 text-gray-800 text-sm font-semibold">👤</span>
+                <span class="hidden sm:inline font-medium">RH</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.24 4.5a.75.75 0 01-1.08 0l-4.24-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd"/></svg>
+              </button>
+              <div class="dropdown-menu right-0" role="menu">
+                <a href="../index.html" class="dropdown-item text-red-600">Déconnexion</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+      <section class="bg-white rounded-lg p-6 shadow-sm">
+        <h1 class="text-xl font-bold mb-4">Rapports et statistiques</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded bg-gray-50">
+            <div class="font-semibold mb-1">Recrutement par service</div>
+            <ul class="text-sm text-gray-700 space-y-1">
+              <li>Tech: 5</li>
+              <li>Marketing: 2</li>
+              <li>Ventes: 1</li>
+            </ul>
+          </div>
+          <div class="p-4 rounded bg-gray-50">
+            <div class="font-semibold mb-1">Temps moyen de recrutement</div>
+            <div class="text-2xl font-bold">14 j</div>
+          </div>
+          <div class="p-4 rounded bg-gray-50">
+            <div class="font-semibold mb-1">Taux d’acceptation</div>
+            <div class="text-2xl font-bold">32%</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-lg p-6 shadow-sm">
+        <h2 class="font-semibold mb-3">Exports</h2>
+        <div class="flex flex-wrap gap-3">
+          <button class="inline-flex items-center px-3 py-2 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-50">Exporter en PDF</button>
+          <button class="inline-flex items-center px-3 py-2 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-50">Exporter en Excel</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/js/navbars.js"></script>
+  </body>
+</html>
